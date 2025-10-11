@@ -19,8 +19,6 @@ Contains location and metadata for Tesla Supercharger sites in Washington and ac
 | `Address` | Physical address |
 | `State`, `County`, `City` | Geographic identifiers |
 | `Latitude`, `Longitude` | GPS coordinates |
-| `Stalls` | Number of charging stalls |
-| `Status` | Station operational status (Open / Coming Soon) |
 
 ---
 
@@ -55,16 +53,4 @@ Anonymized sample of **Battery Electric Vehicle (BEV)** VIN registrations with g
 
 ---
 
-## 🧭 Usage
 
-These datasets are used by scripts in the `/scripts` folder to:
-- Estimate **EV adoption rates** by county  
-- Forecast **charger expansion** under lower and upper-bound policy scenarios  
-- Visualize **charger density vs. population distribution**
-
-**Example Load Script**
-```python
-import pandas as pd
-
-super_df = pd.read_excel("data/raw/supercharger_in_washington_state.xls")
-residents_df = pd.read_excel("data/raw/Population_2024_age_25_to_59.x_
