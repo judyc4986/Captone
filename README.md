@@ -31,6 +31,6 @@ The project combines demographic analysis, infrastructure mapping, and predictiv
 
 ## Dataset
 
-- **EV Registration Data:** 199,000 VIN samples of BEV registrations in Washington.
+- **EV Registration Data:** 199,000 VIN population of BEV registrations in Washington.
 - **Charging Infrastructure:** Locations of the Supercharger network in the U.S. and Washington.
 - **Demographic Data:** Census data by county, age, and year in Washington.
