@@ -292,7 +292,7 @@ Kitsap follows the general pattern of King and Pierce but with clear differences
 
 - Smaller resident population  
 - Greater land area relative to population  
-- Slightly less sensitive to charger expansion compared to King and Pierce in face 1.  
+- Slightly less sensitive to charger expansion and slower adoption rate compared to King and Pierce in Phase 1.  
 
 **Insight:**  
 Kitsap displays a **hybrid pattern** — positioned between urban and rural behavior — reflecting commuter dynamics, ferry travel, and suburban EV distribution.
@@ -324,7 +324,7 @@ Chelan demonstrates how **rural counties depend strongly on public charging infr
 
 Despite their differences, all counties show:
 
-- Monotonic adoption growth  
+- Monotonic adoption growth - the EV adoption rate increases every year without decreasing, producing a smooth and realistic long-term adoption curve aligned with policy targets.
 - Alignment with 2030 / 2035 / 2040 / 2050 targets  
 - Convergence toward the 95% long-term adoption cap  
 - Similar three-phase structure with different slope intensity  
