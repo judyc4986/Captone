@@ -49,7 +49,9 @@ The system iterates through all counties and populates yearly forecast values fo
 ### **Key decisions**
 - EV projections are calculated as:  
 \[
-\text{EVs}_{y} = \text{Adoption}_{y} \times \text{Pop}_{2024}
+\text{Adoption}_{\text{state}} =
+\frac{\sum\limits_{c} (\text{Pop}_{c} \cdot \text{Adoption}_{c})}
+     {\sum\limits_{c} \text{Pop}_{c}}
 \]
 - All forecast columns are converted to numeric to prevent downstream errors.
 
