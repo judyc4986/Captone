@@ -201,7 +201,7 @@ Each phase reflects how Tesla’s Supercharger strategy and the market respond t
 
 ---
 
-## **Step 5 — Monotonic Monte-Carlo Simulation (1,000 Paths)**
+## **Step 5 — Monotonic Monte-Carlo Simulation**
 
 The core of the forecasting model.
 
