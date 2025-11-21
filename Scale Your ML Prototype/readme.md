@@ -108,9 +108,9 @@ y(0) = 0
 **Best Fit:** Cubic (through origin)  
 **R²:** 0.9641  
 
-\[
-y = 3773.495357\,x \;-\; 3.578990\,x^2 \;+\; 0.002106\,x^3
-\]
+📈 EV Registrations best-fit (Cubic through origin, R²=0.9641):
+y = 3773.495357 * x + -3.578990 * x^2 + 0.002106 * x^3
+Constrained: y(0) = 0 (no negative intercept).
 
 ---
 
@@ -119,9 +119,10 @@ y = 3773.495357\,x \;-\; 3.578990\,x^2 \;+\; 0.002106\,x^3
 **Best Fit:** Cubic (through origin)  
 **R²:** 0.9641  
 
-\[
-y = 0.000999\,x \;-\; 0.000001\,x^2 \;+\; 0.000000\,x^3
-\]
+📈 Adoption Rate best-fit (Cubic through origin, R²=0.9641):
+y = 0.000999 * x + -0.000001 * x^2 + 0.000000 * x^3
+Constrained: y(0) = 0 (no negative intercept).
+
 
 ---
 
