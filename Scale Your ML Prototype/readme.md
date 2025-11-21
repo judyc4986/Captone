@@ -48,11 +48,7 @@ The system iterates through all counties and populates yearly forecast values fo
 
 ### **Key decisions**
 - EV projections are calculated as:  
-\[
-\text{Adoption}_{\text{state}} =
-\frac{\sum\limits_{c} (\text{Pop}_{c} \cdot \text{Adoption}_{c})}
-     {\sum\limits_{c} \text{Pop}_{c}}
-\]
+EVs_y = Adoption_y × Pop_2024
 - All forecast columns are converted to numeric to prevent downstream errors.
 
 ### **Trade-offs**
@@ -67,11 +63,7 @@ A final **TOTAL** row is appended to the dataset to provide a statewide rollup a
 ### **Key decisions**
 - Sum all EVs and charger counts across counties.  
 - Use a population-weighted formula for statewide adoption:
-\[
-\text{Adoption}_{state}=
-\frac{\sum(\text{Pop}_{c} \cdot \text{Adoption}_{c})}
-     {\sum(\text{Pop}_{c})}
-\]
+$\text{Adoption}_{state} = \frac{\sum_{c} (\text{Pop}_{c} \cdot \text{Adoption}_{c})}{\sum_{c} \text{Pop}_{c}}$
 
 ### **Trade-offs**
 - Slightly higher computation cost, but ensures a statistically correct statewide adoption rate.
