@@ -102,6 +102,18 @@ Exported and embedded into Excel.
 
 ## 7. Statewide Polynomial Best-Fit Model
 
+### 🔍 What *x* and *y* Mean in the Best-Fit Models
+
+#### EV Registrations vs Superchargers  
+- **x** = total statewide **Supercharger stalls**  
+- **y** = total statewide **EV registrations**  
+This model answers: “If WA has x chargers, how many EVs (y) can the system support?”
+
+#### Adoption Rate vs Superchargers  
+- **x** = total statewide **Supercharger stalls**  
+- **y** = statewide **EV adoption rate** (0–1)  
+This model answers: “If WA has x chargers, what adoption rate (y) can be reached?"
+
 Constrained to:
 
 y(0) = 0
@@ -115,6 +127,38 @@ y = 3773.495357x - 3.578990x^2 + 0.002106x^3
 Cubic — **R² = 0.9641**
 
 y = 0.000999x - 0.000001x^2 + 0.000000x^3
+
+---
+
+## ⭐ Why This Is a Good Forecast
+
+### **1. Real county-level behavior is preserved**
+Population-tier templates capture urban, suburban, and rural differences without needing 39 individual models.
+
+### **2. County → State aggregation is statistically correct**
+Statewide adoption is computed using **population-weighted logic**, not simple averaging.
+
+### **3. Anchored in real 2024 baselines**
+All forecasts begin from true 2024 EV counts, charger points, and populations.
+
+### **4. Polynomial curve reflects real-world adoption dynamics**
+The cubic shape reflects diminishing returns and early steep growth — consistent with real EV adoption behavior.
+
+---
+
+## 🔍 What the R² Value Means
+
+R² (coefficient of determination) measures how well the fitted curve explains the actual data.
+
+### **R² = 0.9641 means:**
+
+- **96.41% of the variation** in EV outcomes is explained by charger availability  
+- The model captures the **true underlying pattern** extremely well  
+- Only ~3.6% of variation is noise or outside influences  
+- This level of fit is considered **excellent** in EV forecasting and infrastructure planning  
+
+### Bottom Line  
+A high R² confirms that the statewide cubic curve is both **statistically strong** and **practically meaningful**, making it suitable for long-term charger build-out planning.
 
 ---
 
@@ -151,36 +195,6 @@ ML models often violate monotonicity and create unstable predictions.
 **Bottom line:**  
 Time-series + Monte Carlo matches how EV adoption actually behaves — policy-driven, phased, and uncertain.  
 Machine learning does not.
-
-## ⭐ Why This Is a Good Forecast
-
-### **1. Real county-level behavior is preserved**
-Population-tier templates capture urban, suburban, and rural differences without needing 39 individual models.
-
-### **2. County → State aggregation is statistically correct**
-Statewide adoption is computed using **population-weighted logic**, not simple averaging.
-
-### **3. Anchored in real 2024 baselines**
-All forecasts begin from true 2024 EV counts, charger points, and populations.
-
-### **4. Polynomial curve reflects real-world adoption dynamics**
-The cubic shape reflects diminishing returns and early steep growth — consistent with real EV adoption behavior.
-
----
-
-## 🔍 What the R² Value Means
-
-R² (coefficient of determination) measures how well the fitted curve explains the actual data.
-
-### **R² = 0.9641 means:**
-
-- **96.41% of the variation** in EV outcomes is explained by charger availability  
-- The model captures the **true underlying pattern** extremely well  
-- Only ~3.6% of variation is noise or outside influences  
-- This level of fit is considered **excellent** in EV forecasting and infrastructure planning  
-
-### Bottom Line  
-A high R² confirms that the statewide cubic curve is both **statistically strong** and **practically meaningful**, making it suitable for long-term charger build-out planning.
 
 ---
 
