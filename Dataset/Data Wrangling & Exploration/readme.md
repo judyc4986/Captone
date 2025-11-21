@@ -1,182 +1,85 @@
+# Washington State EV Forecasting Project
+### *Dataset Cleaning, Profiling & Forecasting Pipeline*
 
-# 🧾 README – Data Wrangling Summary  
-## EV Adoption & Charging Infrastructure in Washington State  
-*(Capstone Project – 2025)*  
+## 📘 Overview
+This repository contains the full workflow for preparing, cleaning, profiling, and forecasting **county-level EV adoption and charging-infrastructure requirements** for Washington State.  
+Three primary datasets are cleaned and merged to produce 2025–2050 EV and charger build-out projections for King, Pierce, Kitsap, and Chelan counties.
+ 
 
----
+## 📂 Project Datasets
+| Dataset | File Name | Purpose |
+|--------|------------|---------|
+| Tesla Supercharger Network | supercharger in washington state.xls | Existing supercharger count |
+| Population (Age 25–59) | Population 2024 age 25 to 59.xlsx | Demographic driver |
+| EV VIN Registration Data | coordinates_output.xlsm | EV counts by county |
 
-### 📦 0. Environment Setup & Automated Profiling
-
-Before beginning data cleaning and forecasting, key Python libraries were installed to handle data import, profiling, and Excel operations.
-
-#### **Installation Command**
+## ⚙️ Environment Setup
 ```bash
 pip install pandas ydata-profiling openpyxl xlrd
 ```
 
-#### **Installed Packages**
-| Package | Version | Purpose |
-|----------|----------|----------|
-| `pandas` | 2.3.3 | Data manipulation and merging |
-| `ydata-profiling` | 4.17.0 | Automated data-quality profiling & EDA |
-| `openpyxl` | 3.1.5 | Read/write `.xlsx` Excel files |
-| `xlrd` | 2.0.2 | Read legacy `.xls` Excel files |
-| *(plus)* `numpy`, `matplotlib`, `scipy`, `statsmodels`, etc. |  | Support for calculations and visualization |
+## 🧪 Dataset Profiling (EDA)
+Generated HTML reports:
+- Report_Supercharger_Profile.html  
+- Report_Population_Profile.html  
+- Report_EV_VIN_Profile.html  
 
-> ✅ All packages were confirmed with “Requirement already satisfied” messages.  
-> 🔁 Restarting the Jupyter kernel is recommended after installation.
+## 🧽 Cleaning & Structuring the Datasets
+### Tesla Supercharger Dataset
+- Filtered WA rows  
+- Normalized county names  
+- Validated coordinates  
+- Counted superchargers  
 
----
+### Population Dataset
+- Selected population column  
+- Standardized county names  
+- Verified numeric integrity  
 
-### 🧮 Automated Dataset Profiling
+### EV VIN Registration Dataset
+- Filtered WA EVs  
+- Cleaned invalid VINs  
+- Standardized county names  
+- Counted EV registrations  
 
-Before manual cleaning, automated HTML reports were generated using **`ydata_profiling`** to detect missing values, correlations, and outliers.
+## 🔧 Preparing Final Inputs for Forecasting Models
+### Policy Adoption Anchors
+| Year | Target EV Adoption |
+|------|--------------------|
+| 2030 | 45% |
+| 2035 | 60% |
+| 2040 | 70% |
+| 2050 | 95% |
 
-#### **Profiling Script**
-```python
-import os
-import pandas as pd
-from ydata_profiling import ProfileReport
+### Lower Bound — Geo-Coverage Model
+- Based on charger radius  
+- Even annual build-out  
 
-# --- Set working directory ---
-os.chdir("/Users/judycheng/Desktop")
-print("📂 Reports will be saved to:", os.getcwd())
+### Upper Bound — Population-Based Model
+- Based on residents-per-charger  
+- Fast → moderate → slow rollout  
 
-# --- Supercharger dataset ---
-supercharger_df = pd.read_excel("supercharger in washington state.xls")
-ProfileReport(
-    supercharger_df,
-    title="🏁 Tesla Supercharger Network Profile (Washington)",
-    explorative=True
-).to_file("Report_Supercharger_Profile.html")
+## 📈 Forecast Output Files
+Examples:
+- king_county_ev_projection_constant_lower.xlsx  
+- pierce_county_ev_projection_constant_lower.xlsx  
+- kitsap_county_ev_projection_constant_lower.xlsx  
+- chelan_county_ev_projection_2025_2050.xlsx  
 
-# --- Population dataset ---
-population_df = pd.read_excel("Population 2024 age 25 to 59.xlsx")
-ProfileReport(
-    population_df,
-    title="👥 Washington Population Profile (Age 25–59)",
-    explorative=True
-).to_file("Report_Population_Profile.html")
+## 📊 Excel Workbook Structure
+### Sheet 1 — Forecast Table
+- EV adoption rate  
+- EV counts  
+- Required chargers  
 
-# --- EV VIN Registration dataset ---
-ev_df = pd.read_excel("coordinates_output.xlsm")
-ProfileReport(
-    ev_df,
-    title="🔋 EV VIN Registration Profile (Battery Electric Vehicles)",
-    explorative=True
-).to_file("Report_EV_VIN_Profile.html")
-```
+### Sheet 2 — Charts
+- EV adoption chart  
+- EV count chart  
+- Charger build-out chart  
 
-#### **Execution Output**
-```
-📂 Reports will be saved to: /Users/judycheng/Desktop
-✅ Supercharger profile saved to Desktop
-✅ Population profile saved to Desktop
-✅ EV VIN registration profile saved to Desktop
-```
-
-Each report provided:
-- Missing-value detection  
-- Variable data types & summary stats  
-- Correlation matrices  
-- Duplicate record identification  
-- Histogram & boxplot outlier visualization  
-
----
-
-### 🧹 1. Data Cleaning & Preparation
-
-#### **File Import and Standardization**
-```python
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import os
-from openpyxl import load_workbook
-from openpyxl.drawing.image import Image
-
-super_df = pd.read_excel("/Users/judycheng/Desktop/supercharger in washington state.xls")
-residents_df = pd.read_excel("/Users/judycheng/Desktop/Population 2024 age 25 to 59.xlsx")
-ev_df = pd.read_excel("/Users/judycheng/Desktop/coordinates_output.xlsm")
-```
-
-- Standardized column names (`State`, `County`, etc.)
-- Unified county naming (e.g., “King County” vs “King”)
-- Ensured numeric columns (`population`, `area`) were properly typed
-
-#### **Filtering by Region**
-```python
-super_df = super_df[super_df["State"] == "Washington"]
-residents_df = residents_df[residents_df["County"].isin(["King County","Pierce County","Kitsap County","Chelan County"])]
-```
-
----
-
-### 🚫 2. Handling Missing Values
-
-- **Supercharger dataset**: Removed incomplete address rows  
-- **Population dataset**: Verified complete  
-- **EV dataset**: Some missing `County` fields were reverse-geocoded using ZIP; rows with <95% confidence were dropped  
-
-```python
-ev_df = ev_df.dropna(subset=["County"])
-```
-
----
-
-### 📊 3. Detecting & Handling Outliers
-
-Outliers were inspected but **not removed**, as they represented real geographic variation (e.g., King County’s higher charger density).
-
-```python
-super_df.describe()
-plt.hist(ev_df['some_numeric_column'], bins=20)
-plt.show()
-```
-
-- Used `.describe()` and histograms to visually confirm ranges  
-- Retained values as part of genuine population/urban variation  
-
----
-
-### 🧩 4. Subsetting Large Datasets
-
-The VIN-level EV registration file was large, so a representative subset of four counties (urban → rural) was used for testing.
-
-```python
-subset_counties = ['King County', 'Pierce County', 'Kitsap County', 'Chelan County']
-ev_subset = ev_df[ev_df['County'].isin(subset_counties)]
-```
-
-This approach reduced computation time but maintained geographic diversity for the forecasting model.
-
----
-
-### ✅ 5. Summary
-
-After cleaning and profiling:
-- Datasets were standardized and aligned across population, charger, and EV registration data  
-- Missing values were handled by filtering or imputation  
-- Outliers were validated and retained  
-- Dataset is now ready for modeling **EV adoption rates** and **charger build-out forecasts (2025–2050)**
-
----
-
-### 🗂️ Output Artifacts
-
-| File | Description |
-|------|--------------|
-| `Report_Supercharger_Profile.html` | Automated profiling of Tesla Supercharger dataset |
-| `Report_Population_Profile.html` | Population age 25–59 analysis |
-| `Report_EV_VIN_Profile.html` | Electric vehicle VIN-level dataset overview |
-| `*_ev_projection_*.xlsx` | County-level forecast outputs with embedded charts |
-| `*_projection_constant_lower.png` | EV charger growth visualization |
-
----
-
-### 💡 Next Steps
-
-- Integrate population growth forecasts for 2030–2050  
-- Calibrate charger coverage models by population density  
-- Combine with EV adoption policy targets (WA Clean Energy Act 2035)  
-
+## ✅ Summary
+This workflow ensures:
+- Clean, standardized datasets  
+- Reliable county-level forecasting  
+- Automated charts and structured output  
+- Consistent modeling from 2025–2050  
