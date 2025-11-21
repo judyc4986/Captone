@@ -264,6 +264,79 @@ This workbook includes:
 
 For each county, the script generates:
 
+
+## 🔍 Insights From the Forecast Results (Cross-County Comparison)
+
+The Monte-Carlo outputs reveal meaningful behavioral patterns across all four counties.  
+Even though the model architecture is identical for every region, differences in population, land area, and charger requirements produce distinct adoption curve shapes.
+
+---
+
+### **1. King County & Pierce County — Similar EV Growth Behavior**
+
+King and Pierce show **very similar Monte-Carlo adoption curves** because both counties share urban characteristics:
+
+- High population density  
+- Strong baseline EV ownership  
+- Stable, predictable charger utilization  
+- Faster response to Phase 1 and Phase 3 charger expansion  
+- Tighter P10–P90 uncertainty bands  
+
+**Insight:**  
+Urban counties exhibit **smooth, fast, policy-aligned growth**, with adoption trajectories strongly guided by policy anchors rather than geographic constraints.
+
+---
+
+### **2. Kitsap County — Suburban Growth With a Noticeable Curve Difference**
+
+Kitsap follows the general pattern of King and Pierce but with clear differences:
+
+- Smaller resident population  
+- Greater land area relative to population  
+- Higher sensitivity to charger geographic coverage early on  
+- Adoption in Phase 2 flattens more noticeably  
+- Phase 3 acceleration is slightly delayed  
+
+**Insight:**  
+Kitsap displays a **hybrid pattern** — positioned between urban and rural behavior — reflecting commuter dynamics, ferry travel, and suburban EV distribution.
+
+---
+
+### **3. Chelan County — Most Distinct Curve, But Same Overall Trend**
+
+Chelan behaves differently from the other three counties due to:
+
+- Very low population density  
+- Very large land geography (mountains, forest, rural towns)  
+- Much larger required charger service radius (15 miles)  
+- Early adoption heavily constrained by geographic coverage  
+- Wider uncertainty bands in Phase 1 and Phase 2  
+
+Even so, Chelan still follows the **same long-term trajectory**:
+
+- Rising Phase 1  
+- Flattening Phase 2  
+- Accelerating Phase 3 toward saturation  
+
+**Insight:**  
+Chelan demonstrates how **rural counties depend strongly on public charging infrastructure** in early years, but eventually converge toward statewide policy targets by 2050.
+
+---
+
+### **4. Overall Conclusion Across All Counties**
+
+Despite their differences, all counties show:
+
+- Monotonic adoption growth  
+- Alignment with 2030 / 2035 / 2040 / 2050 targets  
+- Convergence toward the 95% long-term adoption cap  
+- Similar three-phase structure with different slope intensity  
+
+**Insight:**  
+The model successfully captures both **statewide policy uniformity** and **regional diversity**, showing that EV adoption is universal but shaped by local population density, land area, charger coverage needs, and home-charging reliance.
+
+
+
 [ Chelan County EV Forecast (Excel) ](https://github.com/judyc4986/Captone/blob/main/Experiment%20With%20Various%20Models/chelan_county_ev_projection_mc_monotonic.xlsx)
 
 [ Kitsap County EV Forecast (Excel) ](https://github.com/judyc4986/Captone/blob/main/Experiment%20With%20Various%20Models/kitsap_county_ev_projection_mc_monotonic.xlsx)
