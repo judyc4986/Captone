@@ -185,8 +185,17 @@ This is a **policy + assumptions + infrastructure forecasting** problem — not 
 ---
 
 ## 📊  Outputs
+This workbook includes:
+- Scenarios_LU (Lower vs Upper)
+- Forecast (MC P10 / P50 / P90)
+- Embedded charts (chargers, adoption, EV registrations)
 
 For each county, the script generates:
 
-[ Chelan County Forecast (Excel) ]([https://github.com/judyc4986/Experiment With Various Models/chelan_county_ev_projection_mc_monotonic.xlsx](https://github.com/judyc4986/Captone/blob/3f78f1d879aaf983cb47f3ef3dd76f25ed93aacf/Experiment%20With%20Various%20Models/chelan_county_ev_projection_mc_monotonic.xlsx))
+[ Chelan County EV Forecast (Excel) ](https://github.com/judyc4986/Captone/blob/main/Experiment%20With%20Various%20Models/chelan_county_ev_projection_mc_monotonic.xlsx)
 
+[ Kitsap County EV Forecast (Excel) ](https://github.com/judyc4986/Captone/blob/main/Experiment%20With%20Various%20Models/kitsap_county_ev_projection_mc_monotonic.xlsx)
+
+[ King County EV Forecast (Excel) ](https://github.com/judyc4986/Captone/blob/main/Experiment%20With%20Various%20Models/king_county_ev_projection_mc_monotonic.xlsx)
+
+[ Pierce County EV Forecast (Excel) ](https://github.com/judyc4986/Captone/blob/main/Experiment%20With%20Various%20Models/pierce_county_ev_projection_mc_monotonic.xlsx)
