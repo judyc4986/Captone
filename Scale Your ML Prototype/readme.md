@@ -101,24 +101,35 @@ The system models the statewide relationship between charger density (x) and EV 
 y(0) = 0
 \]
 
+### **Does the fitted curve include 2024 data?**
+Yes.  
+The regression model is trained on **all yearly points from 2024 through 2050**.  
+The lists used in the fit (`x`, `evs`, `adopt`) are constructed from:
+
+years = list(range(2024, 2051))
+
+This means the first point in every series is the **2024 baseline value**, and it is fully included in the regression fitting and best-fit curve generation.
+
 ### **Selected Best-Fit Equations**
 
 #### 📈 **EV Registrations vs Total Superchargers**
-
 **Best Fit:** Cubic (through origin)  
 **R²:** 0.9641  
 
-
-y = 3773.495357 * x + -3.578990 * x^2 + 0.002106 * x^3
+\[
+y = 3773.495357\,x \;-\; 3.578990\,x^2 \;+\; 0.002106\,x^3
+\]
 
 ---
 
 #### 📈 **Adoption Rate vs Total Superchargers**
-
 **Best Fit:** Cubic (through origin)  
 **R²:** 0.9641  
 
-y = 0.000999 * x + -0.000001 * x^2 + 0.000000 * x^3
+\[
+y = 0.000999\,x \;-\; 0.000001\,x^2 \;+\; 0.000000\,x^3
+\]
+
 
 
 ---
