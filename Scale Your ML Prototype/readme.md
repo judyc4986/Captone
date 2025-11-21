@@ -127,11 +127,16 @@ y = 0.000999 * x + -0.000001 * x^2 + 0.000000 * x^3
 
 The pipeline produces a complete statewide deliverable:
 
-- Final dataset: **`wa_county_ev_forecast_filled_mc.xlsx`**  
+- Final dataset: **`wa_county_ev_forecast_filled_mc.xlsx`**
 - 2024 baseline + 2025–2050 Monte Carlo forecasts  
 - TOTAL statewide aggregation row  
 - Three PNG charts  
-- Best-fit formulas embedded directly in the “Charts” Excel sheet  
+- Best-fit formulas embedded directly into the “Charts” Excel sheet  
+
+### 📂 Download Final Forecast Output  
+The complete statewide EV forecast (2024 baseline + 2025–2050 P50 projections) is available here:
+
+👉 **[wa_county_ev_forecast_filled_mc.xlsx](https://github.com/judyc4986/Captone/blob/e549d3c53eca4b2c92e2c852003b5b077295116f/Scale%20Your%20ML%20Prototype/wa_county_ev_forecast_filled_mc.xlsx)**
 
 ### **Result**
 A fully automated, scalable statewide forecasting system capable of updating seamlessly when new datasets, templates, or counties are introduced.
