@@ -157,41 +157,6 @@ A high R² confirms that the statewide cubic curve is both **statistically stron
 
 ---
 
-## ⭐ Why Time-Series + Monte Carlo Works (and ML Doesn’t)
-
-### 1. The forecasting problem is policy-driven
-Washington’s EV adoption is governed by policy targets — 45% by 2030, 70% by 2040, 95% by 2050.  
-These are mandated milestones, not historical patterns that ML can learn.
-
-Time-series + Monte Carlo lets us encode policy phases and ensure a realistic, monotonic curve.
-
-### 2. Monte Carlo captures uncertainty
-EV adoption depends on incentives, infrastructure, cost curves, and regulation.  
-Monte Carlo provides P10/P50/P90 scenarios reflecting these uncertainties.  
-Traditional ML models cannot represent uncertainty without specialized methods.
-
-### 3. Population-tier templates match real county behavior
-Urban counties (King, Pierce), mid-size counties (Kitsap), and small counties (Chelan) follow different adoption shapes.  
-MC templates preserve these differences without needing 39 models.  
-ML would overfit large counties and underfit rural ones.
-
-### 4. Time-series methods enforce physical realism
-EV adoption should not decline, oscillate, or produce year-to-year jumps.  
-MC with monotonic constraints guarantees smooth, realistic adoption curves.  
-ML models often violate monotonicity and create unstable predictions.
-
-### 5. Why ML does not work for this problem
-- Too little historical data (39 counties × few years)  
-- EV adoption is entering a new regulatory phase — not predictable from past patterns  
-- ML cannot understand policy targets or infrastructure assumptions  
-- ML cannot ensure monotonic year-over-year adoption  
-- ML cannot integrate mandated 2030/2040/2050 phases
-
-**Bottom line:**  
-Time-series + Monte Carlo matches how EV adoption actually behaves — policy-driven, phased, and uncertain.  
-Machine learning does not.
-
----
 
 ## 8. Final Deliverables
 
