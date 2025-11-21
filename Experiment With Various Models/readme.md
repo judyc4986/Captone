@@ -279,8 +279,7 @@ King and Pierce show **very similar Monte-Carlo adoption curves** because both c
 - High population density  
 - Strong baseline EV ownership  
 - Stable, predictable charger utilization  
-- Faster response to Phase 1 and Phase 3 charger expansion  
-- Tighter P10–P90 uncertainty bands  
+- Faster response to Phase 1 charger expansion   
 
 **Insight:**  
 Urban counties exhibit **smooth, fast, policy-aligned growth**, with adoption trajectories strongly guided by policy anchors rather than geographic constraints.
@@ -293,9 +292,7 @@ Kitsap follows the general pattern of King and Pierce but with clear differences
 
 - Smaller resident population  
 - Greater land area relative to population  
-- Higher sensitivity to charger geographic coverage early on  
-- Adoption in Phase 2 flattens more noticeably  
-- Phase 3 acceleration is slightly delayed  
+- Slightly less sensitive to charger expansion compared to King and Pierce in face 1.  
 
 **Insight:**  
 Kitsap displays a **hybrid pattern** — positioned between urban and rural behavior — reflecting commuter dynamics, ferry travel, and suburban EV distribution.
@@ -309,8 +306,8 @@ Chelan behaves differently from the other three counties due to:
 - Very low population density  
 - Very large land geography (mountains, forest, rural towns)  
 - Much larger required charger service radius (15 miles)  
-- Early adoption heavily constrained by geographic coverage  
-- Wider uncertainty bands in Phase 1 and Phase 2  
+- Early adoption heavily constrained by geographic coverage. Significant lower adoption rate in phase 1. 
+- Anticipate wider uncertainty bands in Phase 2   
 
 Even so, Chelan still follows the **same long-term trajectory**:
 
