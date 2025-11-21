@@ -102,18 +102,6 @@ Exported and embedded into Excel.
 
 ## 7. Statewide Polynomial Best-Fit Model
 
-### 🔍 What *x* and *y* Mean in the Best-Fit Models
-
-#### EV Registrations vs Superchargers  
-- **x** = total statewide **Supercharger stalls**  
-- **y** = total statewide **EV registrations**  
-This model answers: “If WA has x chargers, how many EVs (y) can the system support?”
-
-#### Adoption Rate vs Superchargers  
-- **x** = total statewide **Supercharger stalls**  
-- **y** = statewide **EV adoption rate** (0–1)  
-This model answers: “If WA has x chargers, what adoption rate (y) can be reached?"
-
 Constrained to:
 
 y(0) = 0
@@ -123,11 +111,20 @@ Cubic — **R² = 0.9641**
 
 y = 3773.495357x - 3.578990x^2 + 0.002106x^3
 
+#### EV Registrations vs Superchargers  
+- **x** = total statewide **Supercharger points**  
+- **y** = total statewide **EV registrations**  
+This model answers: “If WA has x chargers, how many EVs (y) can the system support?”
+
 ### Adoption Rate vs Superchargers  
 Cubic — **R² = 0.9641**
 
 y = 0.000999x - 0.000001x^2 + 0.000000x^3
 
+#### Adoption Rate vs Superchargers  
+- **x** = total statewide **Supercharger points**  
+- **y** = statewide **EV adoption rate** (0–1)  
+This model answers: “If WA has x chargers, what adoption rate (y) can be reached?"
 ---
 
 ## ⭐ Why This Is a Good Forecast
