@@ -83,7 +83,7 @@ The pipeline automatically generates and embeds the following charts into Excel 
 - Automated PNG export and Excel sheet insertion using `openpyxl`.
 
 ### **Trade-offs**
-- Slight increase in file I/O overhead, but ensures reproducible, presentation-ready outputs.
+- Slight increase in file input/output overhead, but ensures reproducible, presentation-ready outputs.
 
 ---
 
