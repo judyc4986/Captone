@@ -142,13 +142,14 @@ A fully automated, scalable statewide forecasting system capable of updating sea
 
 These PNGs are exported automatically and inserted into Excel.
 
-### `chart1_adoption_evs_vs_year.png`
-_Statewide EV registrations and adoption rate from 2024–2050_
+## 1. EV Registrations & Adoption Rate vs Year (2024–2050)
+![EV Registrations & Adoption Rate vs Year](https://github.com/judyc4986/Captone/blob/637caee816078d1ab08b038b1f5dedcabb722421/Scale%20Your%20ML%20Prototype/chart1_adoption_evs_vs_year.png)
 
-### `chart2_chargers_vs_year.png`
-_Total statewide supercharger count from 2024–2050_
+## 2. Total Superchargers vs Year (2024–2050)
+![Total Superchargers vs Year](https://github.com/judyc4986/Captone/blob/637caee816078d1ab08b038b1f5dedcabb722421/Scale%20Your%20ML%20Prototype/chart2_chargers_vs_year.png)
 
-### `chart3_adopt_evs_vs_chargers.png`
-_EV registrations and adoption vs. total chargers (with cubic best-fit curves)_
+## 3. EV Registrations + Adoption Rate vs Total Superchargers
+![EVs & Adoption vs Superchargers](https://github.com/judyc4986/Captone/blob/637caee816078d1ab08b038b1f5dedcabb722421/Scale%20Your%20ML%20Prototype/chart3_adopt_evs_vs_chargers.png)
+
 
 ---
