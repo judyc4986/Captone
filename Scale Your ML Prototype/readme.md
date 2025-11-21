@@ -63,7 +63,7 @@ A final **TOTAL** row is appended to the dataset to provide a statewide rollup a
 ### **Key decisions**
 - Sum all EVs and charger counts across counties.  
 - Use a population-weighted formula for statewide adoption:
-$\text{Adoption}_{state} = \frac{\sum_{c} (\text{Pop}_{c} \cdot \text{Adoption}_{c})}{\sum_{c} \text{Pop}_{c}}$
+Adoption_state = ( Σ(Pop_c × Adoption_c) ) / ( Σ(Pop_c) )
 
 ### **Trade-offs**
 - Slightly higher computation cost, but ensures a statistically correct statewide adoption rate.
