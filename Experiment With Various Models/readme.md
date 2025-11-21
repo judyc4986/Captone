@@ -129,6 +129,31 @@ These form the **outer bounds** for Monte-Carlo simulation.
 
 ---
 
+## 🔁 Phase 1–3: Home-Charging Shift & Tesla Supercharger Strategy
+
+Washington State’s policy assumes **80% home-charging reliance by 2030**.  
+Each phase reflects how Tesla’s Supercharger strategy and the market respond to this transition.
+
+### 🔵 Phase 1 — 2025–2030: “Push Everything” Growth  
+- Strong expansion of **Superchargers** + rapid growth in **home charging**  
+- Goal: remove early charging anxiety and drive EV sales  
+- Adoption climbs quickly toward the **45% 2030 target**  
+- MC paths lean closer to the **Upper bound**
+
+### 🟡 Phase 2 — 2030–2035: Adjustment After Home-Charging Shift  
+- Market digests reaching **80% home-charging**  
+- Public charger growth slows; system rebalances  
+- Adoption curve intentionally **flattens**  
+- MC band widens (higher uncertainty during adjustment)
+
+### 🟠 Phase 3 — 2035–2050: Closing Coverage Gaps & Reaching 95%  
+- Market less sensitive to home-charging share  
+- Tesla expands Superchargers again to eliminate residual range anxiety  
+- Adoption accelerates toward **95%**  
+- MC paths converge toward the cap (~94%)
+
+---
+
 ## **Step 5 — Monotonic Monte-Carlo Simulation (1,000 Paths)**
 
 The core of the forecasting model.
