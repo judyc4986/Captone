@@ -39,6 +39,53 @@ These define each county’s:
 
 ---
 
+
+## 📍 County Descriptions & Why These Four Counties Were Selected
+
+This project uses **King, Pierce, Kitsap, and Chelan Counties** because together they represent the full spectrum of EV adoption environments in Washington State.  
+Each county reflects different combinations of population density, land area, commuting patterns, and EV market maturity.
+
+### **King County — Urban / High Density**
+- Most mature EV market in Washington  
+- Dense population & high charger demand  
+- Ideal for modeling *urban saturation dynamics*
+
+### **Pierce County — Urban/Suburban Mix**
+- Contains both major cities and suburban communities  
+- Growing EV presence  
+- Represents *middle-tier EV expansion patterns*
+
+### **Kitsap County — Suburban / Commuter Region**
+- Heavy commuter flow to King County  
+- EV adoption shaped by ferry routes + suburban travel  
+- Useful for modeling *suburban charger dependency*
+
+### **Chelan County — Rural / Forest Region**
+- Large land area, dispersed towns, long rural corridors  
+- Limited EV penetration but high geographic travel needs  
+- Critical for modeling *rural coverage requirements* and large-radius charger assumptions*
+
+---
+
+### 🎯 **Purpose of Selecting These Counties**
+
+These counties allow the forecasting model to analyze:
+
+#### **1. EV Adoption Across Diverse Region Types**
+- Urban  
+- Suburban  
+- Commuter-based  
+- Rural  
+
+#### **2. Charger Planning Based on Geography & Population**
+Different regions require different strategies:
+- Urban → congestion and capacity  
+- Suburban → commuter and residential mix  
+- Rural → geographic coverage & travel corridors  
+
+This ensures the model captures **both population-based and land-area–based** charger requirements.
+
+
 ## ⚙️ Model Architecture
 
 All county scripts (King, Pierce, Kitsap, Chelan) follow the same **5 Step pipeline**.
@@ -154,7 +201,7 @@ Each phase reflects how Tesla’s Supercharger strategy and the market respond t
 
 ---
 
-## **Step 5 — Monotonic Monte-Carlo Simulation**
+## **Step 5 — Monotonic Monte-Carlo Simulation (1,000 Paths)**
 
 The core of the forecasting model.
 
