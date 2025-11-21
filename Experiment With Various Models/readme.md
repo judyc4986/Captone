@@ -17,7 +17,7 @@ The model uses:
 - **2024 baseline EV, charger, and population data**
 - **Washington State EV policy targets**
 - **Deterministic Lower & Upper time-series paths**
-- **Monotonic Monte-Carlo adoption simulation (1,000 paths)**
+- **Monotonic Monte-Carlo adoption simulation**
 
 ---
 
@@ -41,7 +41,7 @@ These define each county’s:
 
 ## ⚙️ Model Architecture
 
-All county scripts (King, Pierce, Kitsap, Chelan) follow the same **10-step pipeline**.
+All county scripts (King, Pierce, Kitsap, Chelan) follow the same **5 Step pipeline**.
 
 ---
 
