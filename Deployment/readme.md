@@ -92,4 +92,4 @@ https://github.com/judyc4986/ev_forecast_app
 
 ---
 
-If you want an even more fun version (Tesla-style branding, emojis, diagrams), or a more formal academic one, just say the word!
+
