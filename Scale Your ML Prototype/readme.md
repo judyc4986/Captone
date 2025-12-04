@@ -109,7 +109,7 @@ y(0) = 0
 ### EV Registrations vs Superchargers  
 Cubic — **R² = 0.9647**
 
-y = 0.0026120043*x^3 + -4.7343743373*x^2 + 4547.3532407731*x
+y = 0.0026120043*x^3 + -4.7343743373*x^2 + 4547.3532407731*x + -140511.0057756579
 
 - **x** = total statewide **Supercharger points**  
 - **y** = total statewide **EV registrations**  
@@ -118,7 +118,7 @@ This model answers: “If WA has x chargers, how many EVs (y) can the system sup
 ### Adoption Rate vs Superchargers  
 Cubic — **R² = 0.9647**
 
-y = 0.0000000007*x^3 + -0.0000012533*x^2 + 0.0012038019*x
+y = 0.0000000007*x^3 + -0.0000012533*x^2 + 0.0012038019*x + -0.0371968938
 
 - **x** = total statewide **Supercharger points**  
 - **y** = statewide **EV adoption rate** (0–1)  
