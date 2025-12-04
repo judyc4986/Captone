@@ -1,104 +1,95 @@
-# EV Adoption & Charging Forecasting System – Flask Deployment Plan
-Prepared by: Judy Cheng  
-Capstone Project – EV Forecasting & Analytics
+# 🚗⚡ Tesla EV Growth Strategy · Washington EV Hub
+### Explore how supercharger expansion unlocks EV adoption across Washington State.
 
-## Overview
-This document describes the **step-by-step deployment plan** for the EV Adoption & Charging Forecasting System. The application will be deployed as a Flask web service using **free hosting** (Render.com Free Tier). The system provides two forecasting modes:
+Welcome to the **Washington EV Hub**, a simulation platform that lets you explore how different levels of Tesla supercharger expansion influence **EV growth**, **adoption behavior**, and **policy readiness** across all 39 Washington counties.
 
-1. Statewide forecasting – using a best-fit cubic regression model  
-2. County-level forecasting – using 39 county-specific regression models
+These tools combine population density, existing infrastructure, and adoption forecasting to reveal where chargers can create the **biggest jump in EV registrations**—and where they are failing to keep up.
 
-## Deployment Objectives
+### 🌐 Access the EV Forecast Tools  
+👉 **Home Page — Choose Statewide or County-Level Tool**  
+https://home-page-ev.onrender.com/  
 
-### Goals
-- Enable real-time EV forecasting through a simple web interface  
-- Charger input → EV/adoption output  
-- Support statewide and county-level modes  
-- Deploy using **free Flask hosting (Render.com)**  
+Here you can:
+- Model *statewide* EV adoption under different supercharger build-out scenarios  
+- Explore *county-level* infrastructure gaps  
+- See which counties benefit most from each new charger  
+- Understand how supercharger expansion drives EV adoption all the way to 2050  
 
-### Why Flask?
-- Lightweight, minimal overhead  
-- Python-native  
-- Simple routing + API creation  
-- Easy deployment to cloud platforms like Render  
+---
 
-## System Architecture Overview
+## 🔍 Why This Project Is Useful — EV Growth Starts With Charging
 
-```
-                    +----------------------+
-                    |    Flask Web App     |
-                    +----------+-----------+
-                               |
-     +-------------------------+-------------------------+
-     |                                                   |
-+----v----+                                       +------v------+
-| Statewide Model JSON        |                  | County Models JSON |
-| statewide_model.json        |                  | county_models.json |
-+---------+-------------------+                  +---------+---------+
-          |                                               |
-          +----------------------+------------------------+
-                                 |
-                        +--------v--------+
-                        | Prediction      |
-                        | Engine          |
-                        | (Polynomial)    |
-                        +-----------------+
-```
+EV adoption does not grow in a vacuum—it grows where charging access exists. This project helps uncover exactly where Washington’s infrastructure is holding EV adoption back, and how strategic supercharger expansion can unlock the state's climate goals.
 
-## Statewide Flask Deployment – Step-by-Step
+### The platform highlights critical insights such as:
 
-1. Extract statewide regression coefficients  
-2. Save coefficients into `statewide_model.json`  
-3. Build Flask route `/predict/statewide`  
-4. Create input form (total chargers)  
-5. Connect prediction engine  
-6. Render results UI  
-7. Add API endpoint `/api/statewide`  
-8. Deploy on **Render.com free tier**  
+### **Infrastructure Gaps**
+- Dense counties where charging availability is clearly insufficient  
+- Areas where **high population + low charger count** create high charging anxiety  
+- Counties underserved due to **corridor-first planning**, not population-first planning  
 
-## County-Level Flask Deployment – Step-by-Step
+### **Forecasting EV Growth from Charging Expansion**
+- How EV registrations increase with every additional supercharger  
+- How adoption rates shift upward as access improves  
+- Whether counties are *on track* or falling behind 2030–2050 climate mandates  
 
-1. Compute 39 county-level regression models  
-2. Save into `county_models.json`  
-3. Build route `/predict/county`  
-4. Add county dropdown  
-5. Add charger input box  
-6. Load correct county model dynamically  
-7. Predict EV + adoption rate  
-8. Add JSON endpoint `/api/county`  
-9. Deploy on **Render.com free tier**  
+### **Planning, Budgeting & ROI**
+- Allocate charger budgets based on population demand  
+- Prioritize counties where chargers yield the **largest adoption boosts**  
+- Compare ROI for charger deployments between counties  
+- Determine how many chargers are needed statewide to meet policy targets  
 
-## Forecast Workflow Diagram
+This transforms complex demographic + behavioral modeling into a tool that planners, utilities, and strategists can use to make **real-world decisions**.
 
-```
-User Input (Statewide or County + Chargers)
-                    |
-                    v
-            Flask Application
-       (Loads correct model / route)
-                    |
-                    v
-          Prediction Engine
-         (Polynomial Regression)
-                    |
-                    v
-         HTML Results OR JSON API
-```
+---
 
-## Deployment Options
+## 🧠 How the Model Was Developed
 
-- **Render.com Free Tier (Recommended)**
-- Local Flask Development
-- AWS EC2 (advanced)
-- Docker (optional)
+This forecasting engine combines demographic analysis, infrastructure mapping, and probabilistic modeling.
 
-## Deliverables
+### **1️⃣ Establishing the Baseline**
+We analyzed:
+- County-level population density  
+- 2024 EV registration counts  
+- Existing Tesla supercharger locations  
+- Washington climate mandates (2030, 2040, 2050)
 
-- Flask app (statewide + county)
-- JSON model files
-- README.md (this file)
-- Screenshots of UI
-- Public free deployment URL (Render.com)
+### **2️⃣ Creating County Prototypes**
+Using population density and adoption behavior, four “prototype” county types were identified:
+- High density  
+- Medium density  
+- Low density  
+- Sparse  
 
+Each of the 39 Washington counties was assigned to a prototype based on population cutoffs.
 
+### **3️⃣ Monte Carlo + Time-Series Modeling**
+For each prototype:
+- Ran Monte Carlo simulations  
+- Extended forecasts from **2024 → 2050**  
+- Modeled behavioral response to charging access  
 
+### **4️⃣ Pre-Generated Forecast Formulas**
+From the modeling outputs:
+- Built cubic curves for **EV Registrations vs Superchargers**  
+- Built logistic curves for **Adoption Rate vs Superchargers**  
+- Exported formulas into Excel for fast evaluation in the deployed app  
+
+These formulas power the interactive forecasting tools—no heavy computation required at runtime.
+
+---
+
+## 🧭 Explore the Code (3 Repositories)
+
+### 🏠 **Home Hub — Main Landing Page**  
+https://github.com/judyc4986/ev_home_hub  
+
+### 🌎 **Statewide Forecast Tool**  
+https://github.com/judyc4986/ev_render_app  
+
+### 🗺️ **County-Level Forecast Tool**  
+https://github.com/judyc4986/ev_forecast_app  
+
+---
+
+If you want an even more fun version (Tesla-style branding, emojis, diagrams), or a more formal academic one, just say the word!
