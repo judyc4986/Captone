@@ -231,7 +231,7 @@ The PDF includes:
 
 👉 **Download:** 
 
-[User Demonstration Guide (PDF)](https://github.com/judyc4986/CDeployment/Deploy to Production/User Demonstration Guide.pdf)
+[User Demonstration Guide (PDF)]([https://github.com/judyc4986/Captone/blob/ba2eb9bf8e2bb0ac3e6e9e74c201a9f46c25109a/Deployment/Deploy%20to%20Production/User%20Demonstration%20Guide.pdf])
 
 
 ---
