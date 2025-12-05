@@ -85,50 +85,6 @@ This forecasting system:
 
 ---
 
-# 🔄 5. Model Lifecycle: 5-Year Update & Recalibration Cycle
-
-The EV forecasting model **operates on a fixed 5-year cycle**, designed to preserve the long-term 2024–2050 blueprint while still adapting to real-world changes.
-
-## 🕒 What “5-Year Cycle” Means
-
-Each 5-year cycle has:
-
-### **Years 1–4 → Observation Phase**
-Planners monitor:
-
-- EV adoption vs. the P10–P90 forecast band  
-- New supercharger installations  
-- County population (age 25–59)  
-- Progress toward climate policy targets  
-
-If adoption lags, planners can **increase charger build-out** within the existing midpoint → upper-bound range.  
-This avoids unnecessary recalculation.
-
-### **Year 5 → Recalibration Phase**
-A full model update occurs only if meaningful deviation is detected.
-
-During recalibration the system updates:
-
-- Population baselines  
-- Actual charger counts  
-- EV VIN registration counts  
-- Policy targets (if revised)  
-- Phase 1–3 behavioral tuning parameters  
-
-New **Lower/Upper curves** and a fresh **Monte Carlo forecast** (P10/P50/P90) are generated for the next cycle.
-
-## 🧭 Why Recalibrate Only Every 5 Years?
-
-- The forecast is a **long-term strategic blueprint**, not a reactive annual predictor  
-- Natural fluctuations are absorbed by the Lower/Upper envelopes  
-- Charger deployment can be adjusted inside the cycle without changing the model  
-- Infrastructure & budget planning happens in **multi-year cycles**  
-- Multi-year data provides a clearer view of true structural deviation  
-
-This approach keeps the model **strategic, stable, and actionable**.
-
----
-
 # 🛠️ 1. API Documentation
 
 ## 1.1 Base Route
@@ -179,6 +135,35 @@ Example formula in Excel:
 ```
 y = 0.0021*x**3 - 4.7*x**2 + 4500*x - 140000
 ```
+
+### evaluate_formula(formula_str, x_value)
+
+```python
+def evaluate_formula(formula_str, x_value):
+    """
+    Evaluates a pre-computed polynomial/logistic forecasting formula.
+
+    These formulas were generated previously during the model scale-up phase
+    using cubic regression (EVs vs Superchargers) and logistic fits
+    (Adoption Rate vs Superchargers), and then exported into Excel files.
+
+    Parameters
+    ----------
+    formula_str : str
+        Cleaned mathematical expression from the Excel file.
+        Example: "y = 0.0021*x**3 – 4.7*x**2 + 4500*x – 140000"
+
+    x_value : float
+        Number of supercharger points input by user.
+
+    Returns
+    -------
+    float
+        The predicted EV registration or adoption value.
+    """
+```
+
+This enables fast, transparent, reproducible forecasting.
 
 ---
 
@@ -234,5 +219,19 @@ gunicorn app:app
 
 # 📄 User Demonstration Guide (PDF)
 
-👉 **[Download User Demonstration Guide](https://github.com/judyc4986/Captone/blob/ba2eb9bf8e2bb0ac3e6e9e74c201a9f46c25109a/Deployment/Deploy%20to%20Production/User%20Demonstration%20Guide.pdf)**
+A downloadable **User Demonstration Guide** is available for stakeholders who want a full walkthrough.
+
+The PDF includes:
+
+- System overview  
+- GIS + model methodology  
+- Statewide & county-level forecasting examples  
+- Charger deployment scenario planning  
+- Deployment architecture diagrams  
+
+👉 **Download:** `User_Demonstration_Guide.pdf`
+
+https://github.com/judyc4986/Captone/blob/67aaf2f7c511c9bf6c769943d72b546ab77261fa/Deployment/Deploy%20to%20Production/User%20Demonstration%20Guide.pdf
+
+---
 
