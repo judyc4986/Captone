@@ -131,9 +131,6 @@ All charts are automatically exported and embedded into Excel.
 
 # 📐 7. Statewide Polynomial Best-Fit Model
 
-The curve is constrained such that:
-
-**y(0) = 0**
 
 ### **EV Registrations vs Superchargers**  
 Cubic — **R² = 0.9647**
