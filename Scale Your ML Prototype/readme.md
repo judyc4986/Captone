@@ -203,6 +203,13 @@ This makes **~89% statewide adoption both achievable and well-supported** by the
 Download:  
 https://github.com/judyc4986/Captone/blob/e549d3c53eca4b2c92e2c852003b5b077295116f/Scale%20Your%20ML%20Prototype/wa_county_ev_forecast_filled_mc.xlsx
 
+
+- Excel workbook: **wa_county_ev_forecast_fitted_by_county.xlsx**  
+- Embedded best-fit county-level forecast curves
+
+Download:
+https://github.com/judyc4986/Captone/blob/dc1712b071339d09f1a9359ae545092fd9a990d4/Scale%20Your%20ML%20Prototype/wa_county_ev_forecast_fitted_by_county.xlsx
+
 ---
 
 
