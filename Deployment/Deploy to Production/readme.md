@@ -229,11 +229,11 @@ The PDF includes:
 - Charger deployment scenario planning  
 - Deployment architecture diagrams  
 
-👉 **Download:** `User_Demonstration_Guide.pdf`
+👉 **Download:** 
 
-(Place this file in the repo root or `/docs/` folder.)
+[User Demonstration Guide (PDF)](https://github.com/judyc4986/CDeployment/Deploy to Production/User Demonstration Guide.pdf)
+
 
 ---
 
-For enhancements or PDF generation, just ask!
 
