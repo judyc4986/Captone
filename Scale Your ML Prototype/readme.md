@@ -121,6 +121,12 @@ The model produces three key PNG charts:
 
 All charts are automatically exported and embedded into Excel.
 
+![EV Registrations & Adoption Rate vs Year](https://github.com/judyc4986/Captone/blob/25e5e08c74f6393b861477606b9299937d7243dd/Scale%20Your%20ML%20Prototype/chart1_adoption_evs_vs_year.png)
+
+![Total Superchargers vs Year](https://github.com/judyc4986/Captone/blob/25e5e08c74f6393b861477606b9299937d7243dd/Scale%20Your%20ML%20Prototype/chart2_chargers_vs_year.png)
+
+![EVs & Adoption vs Superchargers](https://github.com/judyc4986/Captone/blob/25e5e08c74f6393b861477606b9299937d7243dd/Scale%20Your%20ML%20Prototype/Picture1.png)
+
 ---
 
 # 📐 7. Statewide Polynomial Best-Fit Model
@@ -187,7 +193,4 @@ https://github.com/judyc4986/Captone/blob/e549d3c53eca4b2c92e2c852003b5b07729511
 
 ---
 
-# 🖼️ 9. Included Charts
-
-(Images are linked externally and not embedded into the markdown export.)
 
