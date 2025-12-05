@@ -140,10 +140,25 @@ Cubic — **R² = 0.9647**
 
 y = 0.0026120043*x^3 + -4.7343743373*x^2 + 4547.3532407731*x + -140511.0057756579
 
+Variable Definitions
+
+x = total statewide Supercharger points
+(sum of all individual charger stalls across all 39 counties)
+
+y = total statewide EV registrations
+(forecasted number of EVs on the road)
+
 ### **Adoption Rate vs Superchargers**  
 Cubic — **R² = 0.9647**
 
 y = 0.0000000007*x^3 + -0.0000012533*x^2 + 0.0012038019*x + -0.0371968938
+
+Variable Definitions
+
+x = total statewide Supercharger points
+
+y = statewide EV adoption rate (0–1)
+(percentage of all registered vehicles that are EVs)
 
 ---
 
