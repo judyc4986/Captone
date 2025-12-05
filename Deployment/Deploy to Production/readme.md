@@ -224,14 +224,11 @@ A downloadable **User Demonstration Guide** is available for stakeholders who wa
 The PDF includes:
 
 - System overview  
-- GIS + model methodology  
+- Policy + model methodology  
 - Statewide & county-level forecasting examples  
-- Charger deployment scenario planning  
-- Deployment architecture diagrams  
 
-👉 **Download:** 
+👉 **[Download User Demonstration Guide (PDF)](https://github.com/judyc4986/Captone/blob/ba2eb9bf8e2bb0ac3e6e9e74c201a9f46c25109a/Deployment/Deploy%20to%20Production/User%20Demonstration%20Guide.pdf)**
 
-[User Demonstration Guide (PDF)]([https://github.com/judyc4986/Captone/blob/ba2eb9bf8e2bb0ac3e6e9e74c201a9f46c25109a/Deployment/Deploy%20to%20Production/User%20Demonstration%20Guide.pdf])
 
 
 ---
