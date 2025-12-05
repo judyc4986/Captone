@@ -145,11 +145,11 @@ The cubic shape reflects diminishing returns and early steep growth — consiste
 
 R² (coefficient of determination) measures how well the fitted curve explains the actual data.
 
-### **R² = 0.9641 means:**
+### **R² = 0.9647 means:**
 
-- **96.41% of the variation** in EV outcomes is explained by charger availability  
+- **96.47% of the variation** in EV outcomes is explained by charger availability  
 - The model captures the **true underlying pattern** extremely well  
-- Only ~3.6% of variation is noise or outside influences  
+- Only ~3.5% of variation is noise or outside influences  
 - This level of fit is considered **excellent** in EV forecasting and infrastructure planning  
 
 ### Bottom Line  
