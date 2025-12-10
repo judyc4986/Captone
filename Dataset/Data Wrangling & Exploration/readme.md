@@ -70,11 +70,11 @@ Examples:
 ### Sheet 1 — Forecast Table
 - EV adoption rate  
 - EV counts  
-- Required chargers  
+- Required chargers
 
 ### Sheet 2 — Charts
 - EV adoption chart  
-- EV count chart  
+- EV adoption vs Charger build-out chart 
 - Charger build-out chart  
 
 ## ✅ Summary
